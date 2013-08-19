@@ -360,6 +360,61 @@
 			</control>
 		</control>
 	</include>
+	 <include name="CommonVolumeBottom">
+                <control type="group">
+                        <animation effect="slide" start="0,200" end="0,0" time="800" tween="quadratic" easing="out">WindowOpen</animation>
+                        <animation effect="slide" start="0,0" end="0,200" time="800" tween="quadratic" easing="out">WindowClose</animation>
+                        <visible>Player.HasMedia</visible>
+                        <posx>20</posx>
+                        <posy>110r</posy>
+                        <control type="label">
+                                <description>label</description>
+                                <posx>10</posx>
+                                <posy>0</posy>
+                                <height>50</height>
+                                <width>200</width>
+                                <label>13376</label>
+                                <font>font30_title</font>
+                                <aligny>center</aligny>
+                                <textcolor>white</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                        </control>
+                        <control type="label">
+                                <description>Volumelabel</description>
+                                <posx>445</posx>
+                                <posy>0</posy>
+                                <height>50</height>
+                                <width>200</width>
+                                <label>$INFO[Control.GetLabel(1)]</label>
+                                <font>font30_title</font>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <textcolor>white</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                        </control>
+                        <control type="progress" id="2">
+                                <description>Volume</description>
+                                <posx>0</posx>
+                                <posy>55</posy>
+                                <width>450</width>
+                                <height>50</height>
+                                <info>Player.Volume</info>
+                        </control>
+                        <control type="slider" id="1">
+                                <description>Volume Slider</description>
+                                <posx>0</posx>
+                                <posy>55</posy>
+                                <width>450</width>
+                                <height>50</height>
+                                <info>Player.Volume</info>
+                                <action>Volume</action>
+                                <texturesliderbar>OSDProgressBack2.png</texturesliderbar>
+                                <textureslidernib>OSDSliderNib.png</textureslidernib>
+                                <textureslidernibfocus>OSDSliderNib.png</textureslidernibfocus>
+                        </control>
+                </control>
+        </include>
+
 	<include name="SmallMusicInfo">
 		<control type="image">
 			<description>gradient</description>

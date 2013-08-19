@@ -3,248 +3,40 @@
 	<allowoverlay>no</allowoverlay>	
 	<controls>
 		<include>CommonBackground</include>
-		<control type="label">
-		  <description>IP Label</description>
-		  <posx>308</posx>
-		  <posy>18</posy>
-		  <info>network.ipaddress</info>
-		  <align>left</align>
-		  <align>left</align>
-		  <font>font12</font>
-		  <include>VisibleFadeEffect</include>
-		  <include>Window_OpenClose_Animation</include>
-		  <visible>Skin.HasSetting(homepageSysteminfo) + !Skin.HasSetting(NoLogo) + system.hasnetwork</visible>
-		</control>
-		<control type="image" id="999">
-		  <description>networklogo</description>
-		  <posx>270</posx>
-		  <posy>12</posy>
-		  <width>32</width>
-		  <height>32</height>
-		  <visible>true</visible>
-		  <fadetime>200</fadetime>
-		  <texture>network.png</texture>
-		  <aspectratio>keep</aspectratio>
-		  <include>VisibleFadeEffect</include>
-		  <include>Window_OpenClose_Animation</include>
-		  <visible>Skin.HasSetting(homepageSysteminfo) + !Skin.HasSetting(NoLogo) + system.hasnetwork</visible>
-		</control>
-		<control type="image" id="666">
-		  <description>cpu logo</description>
-		  <posx>428</posx>
-		  <posy>12</posy>
-		  <width>32</width>
-		  <height>32</height>
-		  <visible>true</visible>
-		  <fadetime>200</fadetime>
-		  <texture>cpu.png</texture>
-		  <aspectratio>keep</aspectratio>
-		  <include>VisibleFadeEffect</include>
-		  <include>Window_OpenClose_Animation</include>
-		  <visible>Skin.HasSetting(homepageSysteminfo) + !Skin.HasSetting(NoLogo)</visible>
-		</control>
-		<control type="image" id="656">
-		  <description>free memory logo</description>
-		  <posx>544</posx>
-		  <posy>12</posy>
-		  <width>32</width>
-		  <height>32</height>
-		  <visible>true</visible>
-		  <fadetime>200</fadetime>
-		  <texture>memory.png</texture>
-		  <aspectratio>keep</aspectratio>
-		  <include>VisibleFadeEffect</include>
-		  <include>Window_OpenClose_Animation</include>
-		  <visible>Skin.HasSetting(homepageSysteminfo) + !Skin.HasSetting(NoLogo)</visible>
-		</control>
-		<control type="label">
-		  <description>CPU temp label</description>
-		  <posx>466</posx>
-		  <posy>18</posy>
-		  <info>System.CPUTemperature</info>
-		  <align>left</align>
-		  <font>font12</font>
-		  <include>VisibleFadeEffect</include>
-		  <include>Window_OpenClose_Animation</include>
-		  <visible>Skin.HasSetting(homepageSysteminfo) + !Skin.HasSetting(NoLogo)</visible>
-		</control>
-		<control type="label">
-		  <description>free memory label</description>
-		  <posx>582</posx>
-		  <posy>18</posy>
-		  <info>System.FreeMemory</info>
-		  <align>left</align>
-		  <font>font12</font>
-		  <include>VisibleFadeEffect</include>
-		  <include>Window_OpenClose_Animation</include>
-		  <visible>Skin.HasSetting(homepageSysteminfo) + !Skin.HasSetting(NoLogo)</visible>
-		</control>
-		<control type="image" id="866">
-		  <description>build date logo</description>
-		  <posx>664</posx>
-		  <posy>12</posy>
-		  <width>32</width>
-		  <height>32</height>
-		  <visible>true</visible>
-		  <fadetime>200</fadetime>
-		  <texture>xbmcmini.png</texture>
-		  <aspectratio>keep</aspectratio>
-		  <include>VisibleFadeEffect</include>
-		  <include>Window_OpenClose_Animation</include>
-		  <visible>Skin.HasSetting(homepageSysteminfo) + !Skin.HasSetting(NoLogo)</visible>
-		</control>
-		<control type="label">
-		  <description>builddate xbmc</description>
-		  <posx>702</posx>
-		  <posy>18</posy>
-		  <info>System.BuildVersion</info>
-		  <info>System.BuildVersion</info>
-		  <align>left</align>
-		  <font>font12</font>
-		  <wrapmultiline>true</wrapmultiline>
-		  <include>VisibleFadeEffect</include>
-		  <include>Window_OpenClose_Animation</include>
-		  <visible>Skin.HasSetting(homepageSysteminfo) + !Skin.HasSetting(NoLogo)</visible>
-		</control>
-		<control type="image">
-			<description>LOGO</description>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>170</width>
-			<height>100</height>
-			<aspectratio aligny="top" align="left">keep</aspectratio>
-			<texture>xbmc-logo.png</texture>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>
-			<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
-		</control>
-		
-		<!-- weather information-->
-		<control type="group">
-			<posx>20</posx>
-			<posy>0</posy>
-			<visible>Skin.HasSetting(homepageWeatherinfo) + !IsEmpty(Weather.Plugin)</visible>
-			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<description>Weather image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>60</width>
-				<height>60</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[Weather.Conditions]</texture>
-			</control>
-			<control type="label">
-				<description>Location label</description>
-				<posx>65</posx>
-				<posy>5</posy>
-				<width>500</width>
-				<height>15</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font10</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>$INFO[Window(Weather).Property(Location)]</label>
-			</control>
-			<control type="grouplist">
-				<posx>65</posx>
-				<posy>20</posy>
-				<width>1000</width>
-				<height>30</height>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>0</itemgap>
-				<control type="label">
-					<description>Temp label</description>
-					<width min="0" max="300">auto</width>
-					<height>30</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font28_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
-				</control>
-				<control type="label">
-					<description>Temp Units</description>
-					<width min="0" max="100">auto</width>
-					<height>22</height>
-					<font>font10</font>
-					<aligny>center</aligny>
-					<label>$INFO[System.TemperatureUnits]</label>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
-				</control>
-				<control type="label">
-					<description>Conditions Label</description>
-					<width>500</width>
-					<height>22</height>
-					<font>font10</font>
-					<aligny>center</aligny>
-					<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-		</control>
-		
-		
 		<!-- Music Info -->
 		<control type="group">
-			<posx>0</posx>
-			<posy>300</posy>
+			<posx>120</posx>
+			<posy>10</posy>
 			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<description>Cover image</description>
-				<posx>20</posx>
-				<posy>45</posy>
-				<width>130</width>
-				<height>295</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-				<bordertexture border="8">ThumbBorder.png</bordertexture>
-				<bordersize>5</bordersize>
-			</control>
-			<control type="label">
-				<description>Album Label</description>
-				<posx>170</posx>
-				<posy>265</posy>
-				<height>25</height>
-				<width>1000</width>
-				<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
 			<control type="label">
 				<description>Title label</description>
-				<posx>170</posx>
-				<posy>285</posy>
+				<posx>0</posx>
+				<posy>0</posy>
 				<height>30</height>
-				<width>1000</width>
-				<label>$INFO[MusicPlayer.Title]</label>
+				<width>875</width>
+				<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Title] $INFO[MusicPlayer.Album,[,]]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font13_title</font>
+				<font>font30</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<scrollspeed>30</scrollspeed>
+				<scrollsuffix> - </scrollsuffix>
+				<scroll>true</scroll>
 			</control>
+			
 			<control type="label">
 				<description>Time Label</description>
-				<posx>170</posx>
-				<posy>310</posy>
+				<posx>885</posx>
+				<posy>0</posy>
 				<height>30</height>
 				<width>300</width>
 				<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12</font>
+				<font>font16</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
@@ -1011,15 +803,16 @@
 					<include>VisibleFadeEffect</include>
 				</control>
 	</control>
-		
+	<include>CommonVolumeBottom</include>
+	
 		
 		<!-- end home buttons -->		
 	
-		<control type="group" id="10">
+		<!--<control type="group" id="10">
 			<posx>20</posx>
 			<posy>100r</posy>
 			<include>Window_OpenClose_Animation</include>
-		<!--	<control type="button" id="20">
+			<control type="button" id="20">
 				<description>Power push button</description>
 				<posx>110</posx>
 				<posy>0</posy>
@@ -1074,7 +867,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture>icon_favourites.png</texture>
                                 <visible>!Skin.HasSetting(HideFavourites)</visible>
-			</control> -->
+			</control>
 		</control>
 		<include>Clock</include>
 		<control type="label">
@@ -1091,6 +884,6 @@
 			<label>$INFO[System.Date]</label>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-		</control>
+		</control> -->
 	</controls>	
 </window>
