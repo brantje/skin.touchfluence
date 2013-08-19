@@ -158,7 +158,7 @@
 	<include name="MainWindowMouseButtons">
 		<control type="group">
 			<posx>220r</posx>
-			<posy>100r</posy>
+			<posy>95r</posy>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>system.getbool(input.enablemouse)</visible>
@@ -948,25 +948,25 @@
 			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
 			<animation effect="slide" start="0,0" end="0,-60" time="100">Visible</animation>
 			<animation effect="slide" start="0,-60" end="0,0" delay="400" time="100">Hidden</animation>
-			<posx>300r</posx>
-			<posy>720</posy>
+			<posx>300</posx>
+			<posy>300</posy>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>70</width>
-				<height>65</height>
-				<texture border="20,20,20,2">InfoMessagePanel.png</texture>
+				<width>135</width>
+				<height>125</height>
+				<texture border="20,20,20,20">InfoMessagePanel.png</texture>
 			</control>
 			<control type="label">
 				<posx>5</posx>
 				<posy>0</posy>
-				<width>65</width>
-				<height>60</height>
+				<width>130</width>
+				<height>120</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.SortLetter]</label>
 				<textcolor>white</textcolor>
-				<font>font30_title</font>
+				<font>font45caps_title</font>
 			</control>
 		</control>
 	</include>

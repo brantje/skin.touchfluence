@@ -627,7 +627,7 @@
 				<posx>110</posx>
 				<posy>60</posy>
 				<include>VisibleFadeEffect</include>
-				
+				<include>Window_OpenClose_Animation</include>
 				<control type="panel" id="8000">
 					<animation effect="slide" start="0,0" end="90,0" time="0" condition="StringCompare(Container(8000).NumItems,4)">conditional</animation>
 					<animation effect="slide" start="0,0" end="180,0" time="0" condition="StringCompare(Container(8000).NumItems,3)">conditional</animation>
@@ -635,15 +635,14 @@
 					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8000).NumItems,1)">conditional</animation>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>1050</width>
+					<width>1040</width>
 					<height>720</height>
 					<onleft>8000</onleft>
 					<onright>8000</onright>
 					<onup>20</onup>
 					<ondown>20</ondown>
 					
-					<viewtype label="535">wrap</viewtype>
-					<pagecontrol>-</pagecontrol>
+					<viewtype>wrap</viewtype>
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
 					<include>VisibleFadeEffect</include>
@@ -764,17 +763,58 @@
 						<icon>settings.png</icon>
 						<thumb>-</thumb>
 					</item>		
-					<item id="6">
-						<label>13000</label>
-						<onclick>ActivateWindow(Settings)</onclick>
-						<icon>settings.png</icon>
+					<!-- Custom buttons -->
+					<item id="8">
+						<label>$INFO[system.addontitle(Skin.String(Tile1))]</label>
+						<onclick>RunAddon($INFO[Skin.String(Tile1)])</onclick>
+						<icon>$INFO[system.addonicon(Skin.String(Tile1))]</icon>
 						<thumb>-</thumb>
-					</item>					<item id="7">
-						<label>13000</label>
-						<onclick>ActivateWindow(Settings)</onclick>
-						<icon>settings.png</icon>
-						<thumb>-</thumb>
+						<visible>!IsEmpty(Skin.String(Tile1))</visible>
 					</item>
+					<item id="9">
+						<label>$INFO[system.addontitle(Skin.String(Tile2))]</label>
+						<onclick>RunAddon($INFO[Skin.String(Tile2)])</onclick>
+						<icon>$INFO[system.addonicon(Skin.String(Tile2))]</icon>
+						<thumb>-</thumb>
+						<visible>!IsEmpty(Skin.String(Tile2))</visible>
+					</item>
+					<item id="10">
+						<label>$INFO[system.addontitle(Skin.String(Tile3))]</label>
+						<onclick>RunAddon($INFO[Skin.String(Tile3)])</onclick>
+						<icon>$INFO[system.addonicon(Skin.String(Tile3))]</icon>
+						<thumb>-</thumb>
+						<visible>!IsEmpty(Skin.String(Tile3))</visible>
+					</item>
+					<item id="11">
+						<label>$INFO[system.addontitle(Skin.String(Tile4))]</label>
+						<onclick>RunAddon($INFO[Skin.String(Tile4)])</onclick>
+						<icon>$INFO[system.addonicon(Skin.String(Tile4))]</icon>
+						<thumb>-</thumb>
+						<visible>!IsEmpty(Skin.String(Tile4))</visible>
+					</item>
+					<item id="12">
+						<label>$INFO[system.addontitle(Skin.String(Tile5))]</label>
+						<onclick>RunAddon($INFO[Skin.String(Tile5)])</onclick>
+						<icon>$INFO[system.addonicon(Skin.String(Tile5))]</icon>
+						<thumb>-</thumb>
+						<visible>!IsEmpty(Skin.String(Tile5))</visible>
+					</item>
+					<item id="13">
+						<label>$INFO[system.addontitle(Skin.String(Tile6))]</label>
+						<onclick>RunAddon($INFO[Skin.String(Tile6)])</onclick>
+						<icon>$INFO[system.addonicon(Skin.String(Tile6))]</icon>
+						<thumb>-</thumb>
+						<visible>!IsEmpty(Skin.String(Tile6))</visible>
+					</item>
+					<item id="14">
+						<label>$INFO[system.addontitle(Skin.String(Tile7))]</label>
+						<onclick>RunAddon($INFO[Skin.String(Tile7)])</onclick>
+						<icon>$INFO[system.addonicon(Skin.String(Tile7))]</icon>
+						<thumb>-</thumb>
+						<visible>!IsEmpty(Skin.String(Tile7))</visible>
+					</item>
+					
+					
 				</content>
 					
 				</control>
@@ -786,8 +826,8 @@
 					<height>160</height>
 					<texturefocus>arrow-big-left.png</texturefocus>
 					<texturenofocus>arrow-big-left.png</texturenofocus>
-					<onclick>Control.Move(8000,-1)</onclick>
-					<visible>true</visible>
+					<onclick>Control.Move(8000,-4)</onclick>
+					<visible>Container(8000).HasPrevious</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
@@ -798,8 +838,8 @@
 					<height>160</height>
 					<texturefocus>arrow-big-right.png</texturefocus>
 					<texturenofocus>arrow-big-right.png</texturenofocus>
-					<onclick>Control.Move(8000,1)</onclick>
-					<visible>true</visible>
+					<onclick>Control.Move(8000,4)</onclick>
+					<visible>Container(8000).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 	</control>
