@@ -28,8 +28,8 @@
 		</control>
 		<control type="slider" id="87">
 			<description>Seek Slider</description>
-			<posx>430</posx>
-			<posy>82r</posy>
+			<posx>260</posx>
+			<posy>142r</posy>
 			<width>720</width>
 			<height>16</height>
 			<onup>702</onup>
@@ -42,15 +42,15 @@
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 		</control>
 		<control type="group" id="100">
-			<posx>325</posx>
-			<posy>60r</posy>
+			<posx>100</posx>
+			<posy>120r</posy>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<control type="button" id="600">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>210</label>
 				<font>-</font>
 				<texturefocus>OSDPrevTrackFO.png</texturefocus>
@@ -62,10 +62,10 @@
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="button" id="601">
-				<posx>55</posx>
+				<posx>110</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>31354</label>
 				<font>-</font>
 				<texturefocus>OSDRewindFO.png</texturefocus>
@@ -77,10 +77,10 @@
 				<onclick>PlayerControl(Rewind)</onclick>
 			</control>
 			<control type="togglebutton" id="602">
-				<posx>110</posx>
+				<posx>220</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>31351</label>
 				<altlabel>208</altlabel>
 				<font>-</font>
@@ -96,10 +96,10 @@
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="button" id="603">
-				<posx>165</posx>
+				<posx>330</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>31352</label>
 				<font>-</font>
 				<texturefocus>OSDStopFO.png</texturefocus>
@@ -111,10 +111,10 @@
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="604">
-				<posx>220</posx>
+				<posx>440</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>31353</label>
 				<font>-</font>
 				<texturefocus>OSDForwardFO.png</texturefocus>
@@ -126,10 +126,10 @@
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 			<control type="button" id="605">
-				<posx>275</posx>
+				<posx>550</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>209</label>
 				<font>-</font>
 				<texturefocus>OSDNextTrackFO.png</texturefocus>
@@ -141,79 +141,80 @@
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 			<control type="button" id="606">
-				<posx>330</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
-				<font>-</font>
-				<texture>OSDRepeatFO.png</texture>
-				<texture>OSDRepeatNF.png</texture>
-				<onclick>XBMC.PlayerControl(Repeat)</onclick>
-				<onleft>605</onleft>
-				<onright>607</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
+					<description>Repeat</description>
+					<posx>660</posx>
+					<posy>0</posy>
+					<width>110</width>
+					<height>110</height>
+					<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+					<font>-</font>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.PlayerControl(Repeat)</onclick>
+					<onleft>605</onleft>
+					<onright>607</onright>
+					<onup>1000</onup>
+					<ondown>1000</ondown>
 			</control>
 			<control type="image">
-				<posx>330</posx>
+				<posx>660</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<texture>OSDRepeatNF.png</texture>
 				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 				<visible>!Control.HasFocus(606)</visible>
 			</control>
 			<control type="image">
-				<posx>330</posx>
+				<posx>660</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<texture>OSDRepeatFO.png</texture>
 				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 				<visible>Control.HasFocus(606)</visible>
 			</control>
 			<control type="image">
-				<posx>330</posx>
+				<posx>660</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<texture>OSDRepeatOneNF.png</texture>
 				<visible>Playlist.IsRepeatOne</visible>
 				<visible>!Control.HasFocus(606)</visible>
 			</control>
 			<control type="image">
-				<posx>330</posx>
+				<posx>660</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<texture>OSDRepeatOneFO.png</texture>
 				<visible>Playlist.IsRepeatOne</visible>
 				<visible>Control.HasFocus(606)</visible>
 			</control>
 			<control type="image">
-				<posx>330</posx>
+				<posx>660</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<texture>OSDRepeatAllNF.png</texture>
 				<visible>Playlist.IsRepeat</visible>
 				<visible>!Control.HasFocus(606)</visible>
 			</control>
 			<control type="image">
-				<posx>330</posx>
+				<posx>660</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<texture>OSDRepeatAllFO.png</texture>
 				<visible>Playlist.IsRepeat</visible>
 				<visible>Control.HasFocus(606)</visible>
 			</control>
 			<control type="togglebutton" id="607">
-				<posx>385</posx>
+				<posx>770</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
 				<font>-</font>
 				<texturefocus>OSDRandomOffFO.png</texturefocus>
@@ -228,10 +229,10 @@
 				<ondown>1000</ondown>
 			</control>
 			<control type="button" id="608">
-				<posx>450</posx>
+				<posx>880</posx>
 				<posy>1</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<font>-</font>
 				<texturefocus>OSDratingminFO.png</texturefocus>
 				<texturenofocus>OSDratingmin.png</texturenofocus>
@@ -242,10 +243,10 @@
 				<onclick>DecreaseRating</onclick>
 			</control>
 			<control type="button" id="609">
-				<posx>505</posx>
+				<posx>990</posx>
 				<posy>1</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<font>-</font>
 				<texturefocus>OSDratingplusFO.png</texturefocus>
 				<texturenofocus>OSDratingplus.png</texturenofocus>
@@ -256,285 +257,7 @@
 				<onclick>IncreaseRating</onclick>
 			</control>
 		</control>
-		<control type="group">
-			<posx>300r</posx>
-			<posy>60r</posy>
-			<animation effect="fade" time="200">VisibleChange</animation>
-			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<control type="togglebutton" id="701">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>31128</label>
-				<font>-</font>
-				<texturefocus>OSDLyricsFO.png</texturefocus>
-				<texturenofocus>OSDLyricsNF.png</texturenofocus>
-				<alttexturefocus>OSDLyricsFO.png</alttexturefocus>
-				<alttexturenofocus>OSDLyricsNF.png</alttexturenofocus>
-				<onleft>609</onleft>
-				<onright>500</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-				<onclick>Close</onclick>
-				<onclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
-				<altclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</altclick>
-				<altclick>Close</altclick>
-				<altclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
-				<usealttexture>IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
-			</control>
-			<control type="button" id="500">
-				<posx>55</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>12006</label>
-				<font>-</font>
-				<texturefocus>OSDVizFO.png</texturefocus>
-				<texturenofocus>OSDVizNF.png</texturenofocus>
-				<onleft>701</onleft>
-				<onright>702</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-			</control>
-			<control type="button" id="702">
-				<posx>110</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
-				<font>-</font>
-				<texturefocus>OSDPresetSettingsFO.png</texturefocus>
-				<texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
-				<onleft>500</onleft>
-				<onright>703</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-			</control>
-			<control type="button" id="703">
-				<posx>165</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>31048</label>
-				<font>-</font>
-				<texturefocus>OSDPreFO.png</texturefocus>
-				<texturenofocus>OSDPreNF.png</texturenofocus>
-				<onleft>702</onleft>
-				<onright>704</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-				<onclick>ActivateWindow(122)</onclick>
-			</control>
-			<control type="button" id="704">
-				<posx>220</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>264</label>
-				<font>-</font>
-				<texturefocus>OSDRecordOffFO.png</texturefocus>
-				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
-				<onleft>703</onleft>
-				<onright>600</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-				<onclick>XBMC.PlayerControl(record)</onclick>
-				<enable>Player.CanRecord</enable>
-				<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
-			</control>
-		</control>
-	
-		<control type="group">
-			<control type="list" id="51">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1080</width>
-				<height>500</height>
-				<viewtype label="537">list</viewtype>
-				<pagecontrol>60</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<itemlayout height="80" width="1080">
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1080</width>
-						<height>81</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
-					</control>
-					<control type="image">
-						<posx>10</posx>
-						<posy>10</posy>
-						<width>60</width>
-						<height>52</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<posx>80</posx>
-						<posy>0</posy>
-						<width>950</width>
-						<height>80</height>
-						<font>font45caps_title</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<posx>1060</posx>
-						<posy>0</posy>
-						<width>1000</width>
-						<height>80</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-						<visible>!Window.IsVisible(Videos)</visible>
-					</control>
-					<control type="label">
-						<posx>1005</posx>
-						<posy>0</posy>
-						<width>940</width>
-						<height>80</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-						<visible>Window.IsVisible(Videos)</visible>
-						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
-					</control>
-					<control type="image">
-						<posx>1010</posx>
-						<posy>8</posy>
-						<width>40</width>
-						<height>26</height>
-						<texture>$INFO[ListItem.VideoResolution,flagging/lists/,.png]</texture>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-					</control>
-					<control type="image">
-						<posx>1050</posx>
-						<posy>14</posy>
-						<width>20</width>
-						<height>16</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<posx>1050</posx>
-						<posy>14</posy>
-						<width>16</width>
-						<height>16</height>
-						<texture>OverlayWatching.png</texture>
-						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
-					</control>
-				</itemlayout>
-				<focusedlayout height="80" width="1080">
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1080</width>
-						<height>61</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
-						<visible>!Control.HasFocus(51)</visible>
-						<include>VisibleFadeEffect</include>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1080</width>
-						<height>81</height>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
-						<visible>Control.HasFocus(51)</visible>
-						<include>VisibleFadeEffect</include>
-					</control>
-					<control type="image">
-						<posx>875</posx>
-						<posy>4</posy>
-						<width>200</width>
-						<height>53</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-						<visible>Control.HasFocus(51) + !IsEmpty(ListItem.Label2)</visible>
-					</control>
-					<control type="image">
-						<posx>10</posx>
-						<posy>10</posy>
-						<width>60</width>
-						<height>52</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<posx>80</posx>
-						<posy>0</posy>
-						<width>950</width>
-						<height>80</height>
-						<font>font45caps_title</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<posx>1060</posx>
-						<posy>0</posy>
-						<width>1000</width>
-						<height>60</height>
-						<font>font45caps_title</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-						<visible>!Window.IsVisible(Videos)</visible>
-					</control>
-					<control type="label">
-						<posx>1005</posx>
-						<posy>0</posy>
-						<width>940</width>
-						<height>60</height>
-						<font>font45caps_title</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-						<visible>Window.IsVisible(Videos)</visible>
-						<animation effect="slide" start="0,0" end="40,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
-					</control>
-					<control type="image">
-						<posx>1010</posx>
-						<posy>8</posy>
-						<width>40</width>
-						<height>26</height>
-						<texture>$INFO[ListItem.VideoResolution,flagging/lists/,.png]</texture>
-						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-					</control>
-					<control type="image">
-						<posx>1050</posx>
-						<posy>14</posy>
-						<width>20</width>
-						<height>16</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<posx>1050</posx>
-						<posy>14</posy>
-						<width>16</width>
-						<height>16</height>
-						<texture>OverlayWatching.png</texture>
-						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
-					</control>
-				</focusedlayout>
-				<content>Playlist.GetItems</content>
-			</control>
 		
-		</control>
-	</controls>
+	
+		</controls>
  </window>

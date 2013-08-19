@@ -26,16 +26,16 @@
 				<posx>5</posx>
 				<posy>5</posy>
 				<width>1090</width>
-				<height>630</height>
+				<height>580</height>
 				<texture border="15">ContentPanel.png</texture>
 			</control>
 			<control type="image">
 				<posx>5</posx>
-				<posy>625</posy>
+				<posy>575</posy>
 				<width>1090</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
-			</control>
+			</control> 
 			<control type="button">
 				<description>Close Window button</description>
 				<posx>980</posx>
@@ -68,7 +68,7 @@
 				<posx>10</posx>
 				<posy>90</posy>
 				<width>260</width>
-				<height>481</height>
+				<height>501</height>
 				<itemgap>-1</itemgap>
 				<onleft>60</onleft>
 				<onright>5</onright>
@@ -79,7 +79,7 @@
 				<posx>268</posx>
 				<posy>10</posy>
 				<width>790</width>
-				<height>618</height>
+				<height>568</height>
 				<texture border="5">black-back2.png</texture>
 			</control>
 			<control type="image">
@@ -108,7 +108,7 @@
 				<posx>290</posx>
 				<posy>70</posy>
 				<width>750</width>
-				<height>530</height>
+				<height>480</height>
 				<itemgap>-1</itemgap>
 				<pagecontrol>60</pagecontrol>
 				<onleft>3</onleft>
@@ -136,7 +136,7 @@
 
 		<control type="button" id="10">
 			<description>Default Category Button</description>
-			<height>60</height>
+			<height>70</height>
 			<width>260</width>
 			<textoffsetx>20</textoffsetx>
 			<align>right</align>
@@ -152,8 +152,8 @@
 			<description>Default Button</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<height>40</height>
-			<font>font13</font>
+			<height>50</height>
+			<font>font16</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -163,8 +163,8 @@
 			<description>Default RadioButton</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<height>40</height>
-			<font>font13</font>
+			<height>50</height>
+			<font>font16</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -174,8 +174,8 @@
 			<description>Default SpinControlex</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<height>40</height>
-			<font>font13</font>
+			<height>50</height>
+			<font>font16</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>

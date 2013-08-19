@@ -27,7 +27,7 @@
 			            <posx>30</posx>
                         <posy>110</posy>
                         <width>1265</width>
-                        <height>700</height>
+                        <height>500</height>
                         <onleft>9000</onleft>
                         <onright>9001</onright>
                         <onup>9000</onup>
@@ -35,7 +35,7 @@
                         <pagecontrol>-</pagecontrol>
                         <scrolltime>300</scrolltime>
 						<orientation>Horizontal</orientation>
-                        <itemlayout height="200" width="420">
+                        <itemlayout height="150" width="420">
                                 <control type="image">
                                         <posx>250</posx>
                                         <posy>0</posy>
@@ -48,12 +48,12 @@
                                         <posx>0</posx>
                                         <posy>0</posy>
                                         <width>400</width>
-                                        <height>200</height>
+                                        <height>150</height>
                                         <texture border="5">RecentAddedBack.png</texture>
                                 </control>
-								<control type="label">
+                                <control type="label">
                                         <posx>40</posx>
-                                        <posy>40</posy>
+                                        <posy>10</posy>
                                         <width>360</width>
                                         <height>20</height>
                                         <font>font24_title</font>
@@ -64,16 +64,16 @@
                                 </control>
                                 <control type="textbox">
                                         <posx>40</posx>
-                                        <posy>70</posy>
+                                        <posy>30</posy>
                                         <width>350</width>
-                                        <height>120</height>
+                                        <height>80</height>
                                         <font>font12</font>
                                         <textcolor>grey2</textcolor>
                                         <align>left</align>
                                         <label>$INFO[ListItem.Label2]</label>
                                 </control>
                            </itemlayout>
-                        <focusedlayout height="180" width="420">
+                        <focusedlayout height="150" width="420">
 						        <control type="image">
                                         <posx>250</posx>
                                         <posy>0</posy>
@@ -86,13 +86,13 @@
                                         <posx>0</posx>
                                         <posy>0</posy>
                                         <width>400</width>
-                                        <height>200</height>
+                                        <height>150</height>
                                         <texture border="5">RecentAddedBack.png</texture>
                                 </control>
 
                                 <control type="label">
                                         <posx>40</posx>
-                                        <posy>40</posy>
+                                        <posy>10</posy>
                                         <width>360</width>
                                         <height>20</height>
                                         <font>font24_title</font>
@@ -103,9 +103,9 @@
                                 </control>
                                 <control type="textbox">
                                         <posx>40</posx>
-                                        <posy>70</posy>
+                                        <posy>30</posy>
                                         <width>350</width>
-                                        <height>120</height>
+                                        <height>100</height>
                                         <font>font12</font>
                                         <textcolor>grey2</textcolor>
                                         <align>left</align>
@@ -171,6 +171,7 @@
                         </content>
                 </control>
 		</control>
+		<include>ContentPanelBackgrounds</include>
 		<include>CommonNowPlaying</include>
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>

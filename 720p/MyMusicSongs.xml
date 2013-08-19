@@ -29,7 +29,7 @@
 		<control type="grouplist">
 			<posx>65</posx>
 			<posy>5</posy>
-			<width>1000</width>
+			<width>300</width>
 			<height>30</height>
 			<orientation>horizontal</orientation>
 			<align>left</align>

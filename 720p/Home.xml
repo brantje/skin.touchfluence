@@ -1,5 +1,5 @@
 <window>
-	<defaultcontrol>8000</defaultcontrol>
+	<defaultcontrol>9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
 	<controls>
 		<include>CommonBackground</include>
@@ -24,7 +24,7 @@
 				<shadowcolor>black</shadowcolor>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> - </scrollsuffix>
-				<scroll>true</scroll>
+				<scroll>false</scroll>
 			</control>
 			
 			<control type="label">
@@ -409,16 +409,16 @@
 			</animation>
 
 		<control type="group" id="600">
-				<posx>180</posx>
-				<onup>9003</onup>
-				<ondown>8000</ondown>
+				<posx>15</posx>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
 				<defaultcontrol>-</defaultcontrol>
-				<enable>Player.HasMedia</enable>
+				<visible>Player.HasMedia</visible>
 				<control type="image">
 					<description>Background image</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>530</width>
+					<width>690</width>
 					<height>90</height>
 					<texture flipy="true">HomeSubNF.png</texture>
 					<colordiffuse>CCFFFFFF</colordiffuse>
@@ -433,9 +433,9 @@
 						<label>-</label>
 						<texturefocus>OSDPrevTrackFO.png</texturefocus>
 						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-						<onleft>608</onleft>
+						<onleft>708</onleft>
 						<onright>602</onright>
-						<onup>9003</onup>
+						<onup>9000</onup>
 						<ondown>9000</ondown>
 						<onclick>XBMC.PlayerControl(Previous)</onclick>
 					</control>
@@ -449,7 +449,7 @@
 						<texturenofocus>OSDRewindNF.png</texturenofocus>
 						<onleft>601</onleft>
 						<onright>603</onright>
-						<onup>9003</onup>
+						<onup>9000</onup>
 						<ondown>9000</ondown>
 						<onclick>XBMC.PlayerControl(Rewind)</onclick>
 					</control>
@@ -466,7 +466,7 @@
 						<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
 						<onleft>602</onleft>
 						<onright>604</onright>
-						<onup>9003</onup>
+						<onup>9000</onup>
 						<ondown>9000</ondown>
 						<onclick>XBMC.PlayerControl(Play)</onclick>
 					</control>
@@ -480,7 +480,7 @@
 						<texturenofocus>OSDStopNF.png</texturenofocus>
 						<onleft>603</onleft>
 						<onright>605</onright>
-						<onup>9003</onup>
+						<onup>9000</onup>
 						<ondown>9000</ondown>
 						<onclick>down</onclick>
 						<onclick>XBMC.PlayerControl(Stop)</onclick>
@@ -495,7 +495,7 @@
 						<texturenofocus>OSDForwardNF.png</texturenofocus>
 						<onleft>604</onleft>
 						<onright>606</onright>
-						<onup>9003</onup>
+						<onup>607</onup>
 						<ondown>9000</ondown>
 						<onclick>XBMC.PlayerControl(Forward)</onclick>
 					</control>
@@ -508,11 +508,99 @@
 						<texturefocus>OSDNextTrackFO.png</texturefocus>
 						<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 						<onleft>605</onleft>
-						<onright>607</onright>
-						<onup>9003</onup>
+						<onright>707</onright>
+						<onup>607</onup>
 						<ondown>9000</ondown>
 						<onclick>XBMC.PlayerControl(Next)</onclick>
 					</control>
+				<control type="button" id="707">
+						<description>Repeat</description>
+						<posx>490</posx>
+						<posy>2</posy>
+						<width>80</width>
+						<height>80</height>
+						<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+						<font>-</font>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>XBMC.PlayerControl(Repeat)</onclick>
+						<onleft>606</onleft>
+						<onright>708</onright>
+						<onup>607</onup>
+						<ondown>1000</ondown>
+				</control>
+				<control type="image">
+					<posx>490</posx>
+					<posy>2</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>OSDRepeatNF.png</texture>
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<visible>!Control.HasFocus(707)</visible>
+				</control>
+				<control type="image">
+					<posx>490</posx>
+					<posy>2</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>OSDRepeatFO.png</texture>
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<visible>Control.HasFocus(707)</visible>
+				</control>
+				<control type="image">
+					<posx>490</posx>
+					<posy>2</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>OSDRepeatOneNF.png</texture>
+					<visible>Playlist.IsRepeatOne</visible>
+					<visible>!Control.HasFocus(707)</visible>
+				</control>
+				<control type="image">
+					<posx>490</posx>
+					<posy>2</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>OSDRepeatOneFO.png</texture>
+					<visible>Playlist.IsRepeatOne</visible>
+					<visible>Control.HasFocus(707)</visible>
+				</control>
+				<control type="image">
+					<posx>490</posx>
+					<posy>2</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>OSDRepeatAllNF.png</texture>
+					<visible>Playlist.IsRepeat</visible>
+					<visible>!Control.HasFocus(707)</visible>
+				</control>
+				<control type="image">
+					<posx>490</posx>
+					<posy>2</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture>OSDRepeatAllFO.png</texture>
+					<visible>Playlist.IsRepeat</visible>
+					<visible>Control.HasFocus(707)</visible>
+				</control>
+				<control type="togglebutton" id="708">
+					<posx>570</posx>
+					<posy>2</posy>
+					<width>80</width>
+					<height>80</height>
+					<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+					<font>-</font>
+					<texturefocus>OSDRandomOffFO.png</texturefocus>
+					<texturenofocus>OSDRandomOffNF.png</texturenofocus>
+					<usealttexture>Playlist.IsRandom</usealttexture>
+					<alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
+					<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
+					<onclick>XBMC.PlayerControl(Random)</onclick>
+					<onleft>707</onleft>
+					<onright>601</onright>
+					<onup>607</onup>
+					<ondown>1000</ondown>
+				</control>
 				</control>
 				<control type="group" id="600">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -618,29 +706,29 @@
 				<onleft>606</onleft>
 				<onright>608</onright>
 				<onup>9003</onup>
-				<ondown>9000</ondown>
+				<ondown>606</ondown>
 				<enable>Player.HasMedia</enable>
 			</control>
 		</control>
 <!-- Home menu -->
-<control type="group">
+<control type="group" id="9003">
 				<posx>110</posx>
 				<posy>60</posy>
 				<include>VisibleFadeEffect</include>
 				<include>Window_OpenClose_Animation</include>
-				<control type="panel" id="8000">
-					<animation effect="slide" start="0,0" end="90,0" time="0" condition="StringCompare(Container(8000).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="180,0" time="0" condition="StringCompare(Container(8000).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="270,0" time="0" condition="StringCompare(Container(8000).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8000).NumItems,1)">conditional</animation>
+				<control type="panel" id="9000">
+				<!--	<animation effect="slide" start="0,0" end="90,0" time="0" condition="StringCompare(Container(9000).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="180,0" time="0" condition="StringCompare(Container(9000).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="270,0" time="0" condition="StringCompare(Container(9000).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(9000).NumItems,1)">conditional</animation>-->
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1040</width>
 					<height>720</height>
-					<onleft>8000</onleft>
-					<onright>8000</onright>
-					<onup>20</onup>
-					<ondown>20</ondown>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>600</onup>
+					<ondown>600</ondown>
 					
 					<viewtype>wrap</viewtype>
 					<scrolltime>200</scrolltime>
@@ -716,7 +804,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>Control.HasFocus(8000)</visible>
+							<visible>Control.HasFocus(9000)</visible>
 						</control>
 					</focusedlayout>
 					<content>
@@ -826,8 +914,8 @@
 					<height>160</height>
 					<texturefocus>arrow-big-left.png</texturefocus>
 					<texturenofocus>arrow-big-left.png</texturenofocus>
-					<onclick>Control.Move(8000,-4)</onclick>
-					<visible>Container(8000).HasPrevious</visible>
+					<onclick>Control.Move(9000,-2)</onclick>
+					<visible>Container(9000).HasPrevious</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="button">
@@ -838,8 +926,8 @@
 					<height>160</height>
 					<texturefocus>arrow-big-right.png</texturefocus>
 					<texturenofocus>arrow-big-right.png</texturenofocus>
-					<onclick>Control.Move(8000,4)</onclick>
-					<visible>Container(8000).HasNext</visible>
+					<onclick>Control.Move(9000,2)</onclick>
+					<visible>Container(9000).HasNext</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 	</control>
@@ -909,7 +997,7 @@
                                 <visible>!Skin.HasSetting(HideFavourites)</visible>
 			</control>
 		</control>
-		<include>Clock</include>
+		
 		<control type="label">
 			<description>Date label</description>
 			<posx>25r</posx>
@@ -925,5 +1013,6 @@
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
 		</control> -->
+		<include>Clock</include>
 	</controls>	
 </window>
