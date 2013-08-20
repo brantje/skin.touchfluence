@@ -1,7 +1,7 @@
 <window>
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<onload>OSD</onload>
+	<onload>Playlist</onload>
 	<controls>
 		<control type="image">
 			<description>Fanart Image for Artist</description>
