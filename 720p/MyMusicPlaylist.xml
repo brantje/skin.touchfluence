@@ -79,7 +79,7 @@
 			</control>
 			<control type="label">
 				<description>Clock label</description>
-				<posx>1250</posx>
+				<posx>1150</posx>
 				<posy>5</posy>
 				<width>800</width>
 				<height>25</height>
@@ -185,6 +185,24 @@
 						</control>
 					</control>
 				</control>
+			</control>
+			<control type="button" id="1000">
+				<description>Close Window button</description>
+				<posx>124r</posx>
+				<posy>0</posy>
+				<width>128</width>
+				<height>64</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>ActivateWindow(home)</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>1000</onleft>
+				<onright>1000</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			</control>
 			<control type="group">
 				<posx>160</posx>
