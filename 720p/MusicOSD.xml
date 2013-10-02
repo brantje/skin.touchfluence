@@ -7,6 +7,16 @@
 		<posy>0</posy>
 	</coordinates>
 	<controls>
+	
+		<control type="button">
+			<posx>130r</posx>
+			<posy>100</posy>
+			<width>128</width>
+			<height>128</height>
+			<texturefocus>playlisticon.png</texturefocus>
+			<texturenofocus>playlisticon.png</texturenofocus>
+			<onclick>ActivateWindow(musicplaylist)</onclick>
+		</control>
 		<control type="button" id="1000">
 			<description>Close Window button</description>
 			<posx>84r</posx>

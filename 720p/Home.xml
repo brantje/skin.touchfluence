@@ -433,7 +433,7 @@
 						<label>-</label>
 						<texturefocus>OSDPrevTrackFO.png</texturefocus>
 						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-						<onleft>708</onleft>
+						<onleft>21</onleft>
 						<onright>602</onright>
 						<onup>9000</onup>
 						<ondown>9000</ondown>
@@ -597,7 +597,7 @@
 					<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
 					<onclick>XBMC.PlayerControl(Random)</onclick>
 					<onleft>707</onleft>
-					<onright>601</onright>
+					<onright>21</onright>
 					<onup>607</onup>
 					<ondown>1000</ondown>
 				</control>
@@ -727,8 +727,8 @@
 					<height>720</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
-					<onup>600</onup>
-					<ondown>600</ondown>
+					<onup>21</onup>
+					<ondown>21</ondown>
 					
 					<viewtype>wrap</viewtype>
 					<scrolltime>200</scrolltime>
@@ -932,8 +932,38 @@
 				</control>
 	</control>
 	<include>CommonVolumeBottom</include>
-	
-		
+	<control type="group">
+	<include>VisibleFadeEffect</include>
+	<include>Window_OpenClose_Animation</include>
+	<control type="button" id="21">
+				<description>Favourites push button</description>
+				<posx>20</posx>
+				<posy>100r</posy>
+				<width>90</width>
+				<height>90</height>
+				<label>1036</label>
+				<font>-</font>
+				<aligny>-</aligny>
+				<onclick>ActivateWindow(Favourites)</onclick>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<onleft>708</onleft>
+				<onright>601</onright>
+				<onup>9003</onup>
+				<ondown>9003</ondown>
+                <visible>!Skin.HasSetting(HideFavourites)</visible>
+			</control>
+			<control type="image">
+				<description>Favourites Icon</description>
+				<posx>25</posx>
+				<posy>105r</posy>
+				<width>80</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_favourites.png</texture>
+                                <visible>!Skin.HasSetting(HideFavourites)</visible>
+			</control>
+	</control>
 		<!-- end home buttons -->		
 	
 		<!--<control type="group" id="10">

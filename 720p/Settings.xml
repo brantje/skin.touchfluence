@@ -151,7 +151,7 @@
                                 </item>
                                 <item id="7">
                                         <label>14036</label>
-                                        <label2>31405</label2>
+                                        <label2>31410</label2>
                                         <onclick>ActivateWindow(ServiceSettings)</onclick>
                                         <icon>icon-network.png</icon>
                                 </item>

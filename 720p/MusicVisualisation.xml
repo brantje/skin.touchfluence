@@ -1,7 +1,7 @@
 <window>
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<onload condition="!HasSetting(Noplaylistonvis)">Playlist</onload>
+	<!--<onload condition="!HasSetting(Noplaylistonvis)">Playlist</onload>-->
 	<controls>
 		<control type="image">
 			<description>Fanart Image for Artist</description>
@@ -35,6 +35,16 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
+		</control>
+
+		<control type="button">
+			<posx>130r</posx>
+			<posy>100</posy>
+			<width>128</width>
+			<height>128</height>
+			<texturefocus>playlisticon.png</texturefocus>
+			<texturenofocus>playlisticon.png</texturenofocus>
+			<onclick>ActivateWindow(musicplaylist)</onclick>
 		</control>
 		
 		<!-- media infos -->

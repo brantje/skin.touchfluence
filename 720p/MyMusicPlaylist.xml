@@ -2,6 +2,7 @@
 	<defaultcontrol always="true">55</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+	
 	<views>55</views>
 	<controls>
 		<control type="image">
