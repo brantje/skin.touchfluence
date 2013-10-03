@@ -56,9 +56,9 @@
 			</control>
 			<control type="image" id="1">
 				<posx>0</posx>
-				<posy>230r</posy>
+				<posy>460r</posy>
 				<width>1280</width>
-				<height>230</height>
+				<height>530</height>
 				<texture>HomeNowPlayingBack.png</texture>
 			</control>
 			<control type="image" id="1">
@@ -87,7 +87,7 @@
 			</control>
 			<control type="group" id="1">
 				<posx>330</posx>
-				<posy>185r</posy>
+				<posy>255r</posy>
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<posx>0</posx>
@@ -247,7 +247,7 @@
 			</control>
 			<control type="group" id="1">
 				<posx>330</posx>
-				<posy>95r</posy>
+				<posy>165r</posy>
 				<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
 				<control type="label" id="1">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>

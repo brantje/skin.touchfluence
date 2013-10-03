@@ -29,7 +29,7 @@
 		<control type="slider" id="87">
 			<description>Seek Slider</description>
 			<posx>430</posx>
-			<posy>82r</posy>
+			<posy>152r</posy>
 			<width>720</width>
 			<height>16</height>
 			<onup>702</onup>
@@ -44,7 +44,7 @@
 		<!-- !LiveTV -->
 		<control type="group" id="100">
 			<posx>325</posx>
-			<posy>60r</posy>
+			<posy>130r</posy>
 			<defaultcontrol always="true">202</defaultcontrol>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
@@ -52,8 +52,8 @@
 			<control type="button" id="200">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>210</label>
 				<font>-</font>
 				<texturefocus>OSDPrevTrackFO.png</texturefocus>
@@ -65,10 +65,10 @@
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="button" id="201">
-				<posx>55</posx>
+				<posx>110</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>31354</label>
 				<font>-</font>
 				<texturefocus>OSDRewindFO.png</texturefocus>
@@ -80,10 +80,10 @@
 				<onclick>PlayerControl(Rewind)</onclick>
 			</control>
 			<control type="togglebutton" id="202">
-				<posx>110</posx>
+				<posx>220</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>31351</label>
 				<altlabel>208</altlabel>
 				<font>-</font>
@@ -99,10 +99,10 @@
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="button" id="203">
-				<posx>165</posx>
+				<posx>330</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>31352</label>
 				<font>-</font>
 				<texturefocus>OSDStopFO.png</texturefocus>
@@ -114,10 +114,10 @@
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="204">
-				<posx>220</posx>
+				<posx>440</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>31353</label>
 				<font>-</font>
 				<texturefocus>OSDForwardFO.png</texturefocus>
@@ -129,10 +129,10 @@
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 			<control type="button" id="205">
-				<posx>275</posx>
+				<posx>550</posx>
 				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
+				<width>110</width>
+				<height>110</height>
 				<label>209</label>
 				<font>-</font>
 				<texturefocus>OSDNextTrackFO.png</texturefocus>

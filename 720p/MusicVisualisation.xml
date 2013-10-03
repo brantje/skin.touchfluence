@@ -1,7 +1,7 @@
 <window>
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<!--<onload condition="!HasSetting(Noplaylistonvis)">Playlist</onload>-->
+	<onload>ActivateWindow(musicosd)</onload>
 	<controls>
 		<control type="image">
 			<description>Fanart Image for Artist</description>
@@ -49,7 +49,7 @@
 		
 		<!-- media infos -->
 		<control type="group">
-			<animation effect="fade" time="200">VisibleChange</animation>
+			<!--<animation effect="fade" time="200">VisibleChange</animation>-->
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<control type="image">
 				<posx>0</posx>
